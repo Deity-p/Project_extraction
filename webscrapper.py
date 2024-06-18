@@ -62,7 +62,6 @@ def save_as_text(article):
         with open('article.txt', 'a', encoding='utf-8') as ar:
             paragraphs = article.find_all('p')     # Find all <p> tags within 'article'
             
-
             for paragraph in paragraphs:               #loop through each line/ paragraph
                 text = paragraph.get_text(strip=True)   #extract the text from the paragraph
                 wrapped_text = textwrap.fill(text, width=80) #wrapping the text in a specific width 
